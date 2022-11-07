@@ -2,4 +2,8 @@
     <string name="app_name">TutorialSample</string>
     <string name="current_user_intent">CurrentUser</string>
     <string name="current_user_id">CurrentUserId</string>
+    <string name="art_baseurl">https://collectionapi.metmuseum.org/public/collection/v1/</string>
+    <string name="language_api_token">787289c8aemsh1365ba24d3bc1e1p12b7cdjsnfb44269e5b5e</string>
+    <string name="language_api_host">ai-translate.p.rapidapi.com</string>
+    <string name="language_baseurl">https://ai-translate.p.rapidapi.com/</string>
 </resources>

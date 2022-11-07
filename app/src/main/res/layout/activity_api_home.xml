@@ -26,10 +26,10 @@
         android:text="POST: Translate API"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/planet_img_url" />
+        app:layout_constraintTop_toBottomOf="@+id/art_name" />
 
     <ImageView
-        android:id="@+id/planet_image"
+        android:id="@+id/art_image"
         android:layout_width="380dp"
         android:layout_height="250dp"
         android:layout_marginTop="20dp"
@@ -39,14 +39,14 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/planet_img_url"
+        android:id="@+id/art_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="https://google.com"
+        android:text="Some Art"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/planet_image" />
+        app:layout_constraintTop_toBottomOf="@+id/art_image" />
 
     <EditText
         android:id="@+id/input_text"
@@ -55,7 +55,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Input Text"
+        android:text="Hello World"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -64,7 +64,7 @@
         android:layout_width="380dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:text="Output Text"
+        android:text="Output Field"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/toLanguage" />
@@ -112,5 +112,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/toLanguage"
         app:layout_constraintStart_toEndOf="@+id/toLanguage"
         app:layout_constraintTop_toTopOf="@+id/toLanguage" />
+
+    <TextView
+        android:id="@+id/art_img_src"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="https://google.com"
+        app:layout_constraintStart_toStartOf="@+id/art_name"
+        app:layout_constraintTop_toBottomOf="@+id/art_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
