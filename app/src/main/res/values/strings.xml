@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TutorialSample</string>
+    <string name="current_user_intent">CurrentUser</string>
 </resources>
