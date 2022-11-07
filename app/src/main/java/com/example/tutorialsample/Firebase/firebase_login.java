@@ -152,6 +152,7 @@ public class firebase_login extends AppCompatActivity {
 
         Intent intent = new Intent(firebase_login.this, firebase_display.class);
         intent.putExtra(getResources().getString(R.string.current_user_intent), currentUser.getEmail());
+        intent.putExtra(getResources().getString(R.string.current_user_id), currentUser.getUid());
         startActivity(intent);
     }
 }

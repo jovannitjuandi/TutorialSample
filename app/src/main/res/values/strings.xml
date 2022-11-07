@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TutorialSample</string>
     <string name="current_user_intent">CurrentUser</string>
+    <string name="current_user_id">CurrentUserId</string>
 </resources>
