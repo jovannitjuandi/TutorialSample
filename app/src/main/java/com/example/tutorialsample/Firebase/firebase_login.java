@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**************************************************************************************************/
@@ -135,6 +137,13 @@ public class firebase_login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Log.d(TAG, "SIGNUP SUCCESS!");
+
+                    // Assign an image and a username for newly created users
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    database.getReference("Gravatars/" + task.getResult().getUser().getUid()).setValue(0);
+                    database.getReference(task.getResult().getUser().getUid() + "/username")
+                            .setValue(task.getResult().getUser().getEmail().substring(0, email.indexOf("@")));
+
                     GoToDisplay();
                 } else {
                     String failCause = task.getException().getMessage();
