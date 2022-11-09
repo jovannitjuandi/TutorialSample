@@ -53,7 +53,7 @@ private String TAG = "APP_GENERATED_Api_Home";
                 Integer total = response.body().getTotal();
                 Random randomizer = new Random();
                 Integer chosenId = allIds.get(randomizer.nextInt(total));
-                Integer hasImage = 544740;
+                Integer hasImage = 544740; // Change this if needed, some art does not have an image
 
                 Call<ArtObjectResponse> artObject = artService.getArtById(hasImage);
                 artObject.enqueue(new Callback<ArtObjectResponse>() {
@@ -96,6 +96,8 @@ private String TAG = "APP_GENERATED_Api_Home";
         TextView output_text = findViewById(R.id.output_text);
         RadioGroup toLanguage = findViewById(R.id.toLanguage);
         Button translate_button = findViewById(R.id.translate_button);
+        RadioButton toIndonesia = findViewById(R.id.toIndonesia);
+        toIndonesia.setChecked(true);
 
         Retrofit retrofitLanguage = new Retrofit.Builder()
                 .baseUrl(getResources().getString(R.string.language_baseurl))
