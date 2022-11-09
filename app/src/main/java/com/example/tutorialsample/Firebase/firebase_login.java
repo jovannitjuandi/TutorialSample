@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.tutorialsample.MainActivity;
 import com.example.tutorialsample.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -163,5 +164,12 @@ public class firebase_login extends AppCompatActivity {
         intent.putExtra(getResources().getString(R.string.current_user_intent), currentUser.getEmail());
         intent.putExtra(getResources().getString(R.string.current_user_id), currentUser.getUid());
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d(TAG, "onBackPressed Called");
+        Intent setIntent = new Intent(firebase_login.this, MainActivity.class);
+        startActivity(setIntent);
     }
 }
